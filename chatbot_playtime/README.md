@@ -41,7 +41,7 @@ You're good to go!
 
 If you look at how the code is organized, we have the following folder structure:
 
-- chatBot+playtime/
+- chatBot_playtime/
   -  notebooks_crawl/
   -  notebooks_process_raw_data/
   -  notebooks_query_chatGPT/
@@ -51,8 +51,7 @@ If you look at how the code is organized, we have the following folder structure
 
 ## Question Answering Over Documents
 
-The codebase deals with using a specific Knowledge Base for chatGPT to respond on.  As powerful as LLMs are, they do not know about information they were not trained on. If you want to use an LLM to answer questions about documents it was not trained
-on, you have to give it information about those documents. The idea is that for every question you want to ask chatGPT, you first do a retrieval step to fetch any relevant documents and then pass those documents, along with the original question, to the language model and have it generate a response. 
+The codebase deals with using a specific Knowledge Base for chatGPT to respond on.  As powerful as LLMs are, they do not know about information they were not trained on. If you want to use an LLM to answer questions about documents it was not trained on, you have to give it information about those documents. The idea is that for every question you want to ask chatGPT, you first do a retrieval step to fetch any relevant documents and then pass those documents, along with the original question, to the language model and have it generate a response. 
 
 In this repo, we are concentrating on Domain specific data as our knowledge base.
 
@@ -71,18 +70,13 @@ In this repo, we are concentrating on Domain specific data as our knowledge base
 #### Chunk & Embed
 - The notebooks in the `notebooks_process_raw_data/` folders deal with chuking (breaking up the data into smaller consumabled chunks) and Embedding the data.  
 - The processed data is stored in the `processed_data/` folder, which is also not stored in github
-- There are several notebooks in this folder that process the data and store it in CSV format or
-a VectorIndex.
-- Specifically for Vector Indexes we are looking into storing it as a simple Vector Index implementation vai the llamaIndex framwork and a VectorStoreIndex DB
-via the Langachain framework.
 
 #### Question Answer System
-
 - The main folder for this work is `notebooks_query_chatGPT/` which deals with notebooks that use processed data to answer questions.
 
 
 
-## Thoughts on What's Next
+## What's Next
 
 
 ## Build Control over completion results
