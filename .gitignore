@@ -168,3 +168,5 @@ cython_debug/
 processed_data/
 raw_data/
 .chroma/
+sql_data/
+misc/
